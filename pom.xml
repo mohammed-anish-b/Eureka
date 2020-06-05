@@ -11,7 +11,7 @@
 	<groupId>com.mhmdanish</groupId>
 	<artifactId>eureka</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>eureka</name>
 	<description>eureka server for pos</description>
 
@@ -73,6 +73,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		<finalName>eureka</finalName>
 	</build>
 
 </project>
