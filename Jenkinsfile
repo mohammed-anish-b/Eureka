@@ -13,12 +13,12 @@ pipeline {
 		}
 		stage('image'){
 			steps {
-				bat 'docker build -f Dockerfile -t mhmdanish/eureka .'
+				docker.build('mhmdanish/eureka', '-f Dockerfile .')
 			}
 		}
 		stage('run') {
 			steps {
-				bat 'docker run -p 8083:8083 mhmdanish/eureka'
+				docker.run('mhmdanish/eureka').run('-p 8083:8083')
 			}
 		}
 	}
