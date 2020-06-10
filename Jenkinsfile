@@ -8,17 +8,17 @@ pipeline {
         }
 		stage('build') {
 			steps {
-				sh 'mvn clean install -DskipTests'
+				bat 'mvn clean install -DskipTests'
 			}
 		}
 		stage('image'){
 			steps {
-				sh 'docker build -f Dockerfile -t mhmdanish/eureka .'
+				bat 'docker build -f Dockerfile -t mhmdanish/eureka .'
 			}
 		}
 		stage('run') {
 			steps {
-				sh 'docker run -p 8083:8083 mhmdanish/eureka'
+				bat 'docker run -p 8083:8083 mhmdanish/eureka'
 			}
 		}
 	}
