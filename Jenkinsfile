@@ -13,6 +13,7 @@ pipeline {
 		}
 		stage('image'){
 			steps {
+				sh cmd
 				docker.build('mhmdanish/eureka', '-f Dockerfile .')
 			}
 		}
